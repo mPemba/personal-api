@@ -37,7 +37,7 @@ var user = {
 	  	name: 'Javascript',
 	  	experience: 'beginner'
 	  }
-	];
+	]
 };
 
 app.use(function(req, res, next) {
@@ -116,7 +116,17 @@ app.post('/references', function(req, res) {
 })
 
 app.get('/skills', function(req, res) {
-	res.status(200).json(user.skills);
+	if (req.query.experience) {
+		var skillSet = [];
+		for (var i = 0; i < user.skills.length; i++) {
+			if (user.skills[i].experience === req.query.experience) {
+				skillSet.push(user.skills[i]);
+				res.status(200).json(user.skillSet);
+			} else {
+				res.status(200).json(user.skills);
+			}
+		}
+	}
 })
 
 app.post('/skills', function(req, res) {
