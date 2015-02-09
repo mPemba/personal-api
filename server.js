@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 
 var user = {
 	name: 'Pemba',
-	location: 'Nepal',
-	hobbies: ['music', 'magic'],
+	location: 'MARS!',
+	hobbies: ['music', 'magic', 'AngularJS'],
 	occupations: ['webDev', 'musician'],
 	mentions: ['https://www.youtube.com/user/PleaseEnjoyTheSpins'],
 	references: ['J-Young', 'JK-Smith', 'Moondog', 'J-Jansen'],
@@ -119,18 +119,32 @@ app.post('/references', function(req, res) {
 	}
 })
 
+// app.get('/skills', function(req, res) {
+// 	if (req.query.experience) {
+// 		var skillSet = [];
+// 		for (var i = 0; i < user.skills.length; i++) {
+// 			if (user.skills[i].experience === req.query.experience) {
+// 				skillSet.push(user.skills[i]);
+// 				res.status(200).json(user.skillSet);
+// 			} else {
+// 				skillSet.push(user.skills[i]);
+// 				res.status(200).json(skills);
+// 			}
+// 		}
+// 	}
+// })
+
 app.get('/skills', function(req, res) {
 	if (req.query.experience) {
 		var skillSet = [];
 		for (var i = 0; i < user.skills.length; i++) {
 			if (user.skills[i].experience === req.query.experience) {
 				skillSet.push(user.skills[i]);
-				res.status(200).json(user.skillSet);
-			} else {
-				res.status(200).json(user.skills);
 			}
 		}
-		res.status(200).json(user.skills);
+		    res.status(200).json(user.skillSet);
+		} else {
+			res.status(200).json(user.skills);
 	}
 })
 

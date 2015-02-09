@@ -1,0 +1,64 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	background: hsl(220, 63%, 33%);
+}
+.navbar {
+	text-align: center;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+}
+.nav-item {
+	border: 1px solid #fff;
+	margin: 30px 0px 0px 15px;
+	width: 150px;
+}
+.nav-item:hover {
+	border: 2px solid hsl(58, 100%, 50%);
+}
+.nav-item-link {
+	color: #fff;
+	padding: 3px 8px 3px 8px;
+	text-decoration: none;
+}
+/*HOME PAGE*/
+.home-content {
+	color: #fff;
+	text-align: center;
+	background: hsl(220, 63%, 33%);
+	font-family: font-family: 'Old Standard TT', serif;
+	font-weight: lighter;
+}
+.home-page-headline {
+	font-size: 3rem;
+	font-weight: lighter;
+}
+.home-page-details {
+	font-size: 1.5rem;
+	font-weight: lighter;
+
+}
+/*ME PAGE*/
+.me-content {
+	color: #fff;
+	text-align: center;
+	background: hsl(220, 63%, 33%);
+	font-family: font-family: 'Old Standard TT', serif;
+	font-weight: lighter;
+}
+.about-me-parents {
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+/*SKILLS PAGE*/
+.skills-content {
+	color: #fff;
+	text-align: center;
+	background: hsl(220, 63%, 33%);
+	font-family: font-family: 'Old Standard TT', serif;
+	font-weight: lighter;
+}

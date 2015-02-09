@@ -1,4 +1,7 @@
 <div class="skills-content">
-  <h1>Skills yo</h1>
-  <p>my skills are: {{skills}}</p>
+  <h1>Skills</h1>
+  <div ng-repeat="skill in skills">
+    {{skills.skname}} <br>
+    {{skills.experience}}
+  </div>
 </div>

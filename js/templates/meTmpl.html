@@ -7,13 +7,20 @@
 </div>
  -->
 <div class="me-content">
-  <h1>My skills: </h1>
-  <p>My hobbies are: </p>
+  <h1>About Me</h1>
+  <p class="about-me-parents">My hobbies are: </p>
   <div ng-repeat="hobby in hobbies">{{hobby}}</div> <br>
-  <p>My occupations have been: </p>
+  <input type="text" placeholder="add hobby"/> <br>
+
+  <p class="about-me-parents">My occupations have been: </p>
   <div ng-repeat="occupation in occupations">{{occupation}}</div> <br>
-  <p>You can see me at: </p>
+  <input type="text" placeholder="add occupation"/>
+
+  <p class="about-me-parents">You can see me at: </p>
   <div ng-repeat="mention in mentions">{{mention}}</div> <br>
-  <p>Some character references of mine are: </p>
+  <input type="text" placeholder="add mention"/>
+
+  <p class="about-me-parents">Some character references of mine are: </p>
   <div ng-repeat="ref in references">{{ref}}</div> <br>
+  <input type="text" placeholder="add reference"/>
 </div>
