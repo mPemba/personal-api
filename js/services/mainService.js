@@ -9,7 +9,6 @@ app.service('mainService', function($http, $q) {
 			url: 'http://localhost:8666/'+str
 		})
 		.then(function(res) {
-
 			dfd.resolve(res.data);
 		})
 		return dfd.promise;

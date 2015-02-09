@@ -134,19 +134,6 @@ app.post('/references', function(req, res) {
 // 	}
 // })
 
-app.get('/skills', function(req, res) {
-	if (req.query.experience) {
-		var skillSet = [];
-		for (var i = 0; i < user.skills.length; i++) {
-			if (user.skills[i].experience === req.query.experience) {
-				skillSet.push(user.skills[i]);
-			}
-		}
-		    res.status(200).json(user.skillSet);
-		} else {
-			res.status(200).json(user.skills);
-	}
-})
 
 app.post('/skills', function(req, res) {
 	if (req.body) {
@@ -158,5 +145,18 @@ app.post('/skills', function(req, res) {
 	}
 }) 
 
-
+app.get('/skills', function(req, res) {
+    var responseArray = [];
+    if (req.query.experience) {
+    	for (var i = 0; i < user.skills.length; i++) {
+    		if (req.query.experience === user.skills[i].experience) {
+    			responseArray.push(user.skills[i]);
+    		}
+    	}
+    	res.status(200).json(responseArray);
+    	res.status(200).json(user.skills);
+    } else {
+    	res.status(200).json(user.skills);
+    }
+});
 
