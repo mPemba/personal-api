@@ -1,0 +1,19 @@
+<!-- <div class="me-content">
+  <h1>ME</h1>
+  <p>I enjoy: {{hobbies}}</p>
+  <p>I have been: {{occupations}}</p>
+  <p>You can see me here: {{mentions}}</p>
+  <p>Some character references are: {{references}}</p>
+</div>
+ -->
+<div class="me-content">
+  <h1>My skills: </h1>
+  <p>My hobbies are: </p>
+  <div ng-repeat="hobby in hobbies">{{hobby}}</div> <br>
+  <p>My occupations have been: </p>
+  <div ng-repeat="occupation in occupations">{{occupation}}</div> <br>
+  <p>You can see me at: </p>
+  <div ng-repeat="mention in mentions">{{mention}}</div> <br>
+  <p>Some character references of mine are: </p>
+  <div ng-repeat="ref in references">{{ref}}</div> <br>
+</div>

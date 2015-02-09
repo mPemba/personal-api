@@ -60,8 +60,8 @@ app.put('/location', function(req, res) {
     if (req.body) {
     	me.location = req.body.location;
     	console.log('New Location is: ');
-    	console.log(me.location);
-    	res.status(200).json(me.location);
+    	console.log(user.location);
+    	res.status(200).json(user.location);
     } else {
     	res.status(400).send('no sir');
     }
@@ -72,6 +72,8 @@ app.get('/hobbies', function(req, res) {
 		res.status(200).json(user.hobbies.reverse());
 	} else if (req.query.alpaOrder === 'asc') {
 		res.status(200).json(user.hobbies.sort());
+	} else {
+		res.status(200).json(user.hobbies);
 	}
 })
 
@@ -80,6 +82,8 @@ app.get('/occupations', function(req, res) {
 		res.status(200).json(user.occupations.reverse());
 	} else if (req.query.alpaOrder === 'asc') {
 		res.status(200).json(user.occupations.sort());
+	} else {
+		res.status(200).json(user.occupations);
 	}
 })
 
@@ -109,7 +113,7 @@ app.post('/references', function(req, res) {
 	if (req.body) {
 		console.log('post to references: ' + req.body);
 		user.references.push(req.body);
-		res.status(200).json(me.references);
+		res.status(200).json(user.references);
 	} else {
 		res.status(400).send('bad bad');
 	}
@@ -126,6 +130,7 @@ app.get('/skills', function(req, res) {
 				res.status(200).json(user.skills);
 			}
 		}
+		res.status(200).json(user.skills);
 	}
 })
 
